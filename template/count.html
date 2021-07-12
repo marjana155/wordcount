@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<br> <br>
+<button class="center"
+    style="background-color: #788c77;border: 0ch;border-radius: 14cm;padding: 5px 5px; width: 20%;font-weight: bold;"><a
+        href="{% url 'home' %}" style="color: white;">
+        Start Again </a></button>
+<div style="color: #736773;">
+    <h2 style="font-weight: bold;">Your text:</h2>
+    {{fulltext}}
+    <br> <br>
+    <h2 style="font-weight: bold;">Number of words in this text :
+        <b style="font-size: 72px;">{{n}}</b> </h2>
+    <br>
+    <h2 style="font-weight: bold;">Occurrences:</h2>
+    <br>
+    {% for word,count in wordDictionary %}
+    <b>{{word}}({{count}})</b>
+    <br><br>
+    {% endfor %}
+    <br>
+</div>
+{% endblock %}

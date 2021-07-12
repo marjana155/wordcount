@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<div style="margin: 25px;padding: 20px;box-sizing: border-box;">
+    <img src="{% static 'logo greenish.png'%}" alt="logo greenish" height="10%" width="10%" class="center">
+    <h1 class="center" style="color:#788c77;width:35%;padding-left: 10px;padding-top: 10px;"><b>WORD COUNT</b></h1>
+    <br>
+    <form action="{% url 'count' %}" method="GET">
+        <h2 style="color:#736763;">Enter your text here</h2>
+        <textarea cols="93" rows="10" name="fulltext" style="color:#788c77;border-color:#788C77"></textarea>
+        <br>
+        <input type="submit" value="Count"
+            style="background-color: #736763;color: white;border: 0ch;border-radius: 14px;padding: 5px 5px;width:15%;font-weight: bold;"
+            type="button" class="center " />
+    </form>
+</div>
+{% endblock %}
